@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body class="home-page min-h-screen max-w-md bg-base-200 mx-auto">
+<body class="home-page min-h-screen max-w-md mx-auto bg-base-200">
     <header class="border-b-2 border-gray-200 py-3">
         <section class="w-11/12 mx-auto flex justify-between items-center">
 
@@ -50,8 +50,8 @@
         </section>
     </header>
 
-    <section class="w-11/12 mx-auto space-y-4">
-        <h2 class="text-3xl font-bold pt-8">Welcome to Pay<span class="text-primary">oo</span></h2>
+    <section class="w-11/12 mx-auto pt-8 space-y-4">
+        <h2 class="text-3xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
         <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
         <div class="buttons pt-4 grid grid-cols-3 gap-4">
@@ -81,6 +81,33 @@
             </button>
         </div>
     </section>
+
+    <section class="cashout-section w-11/12 mx-auto py-4">
+        <h2 class="text-neutral font-bold text-xl mb-2">Cash Out</h2>
+
+        <div class="card bg-base-100 w-full shadow mx-auto rounded-xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label text-neutral font-bold">Agent Number</label>
+                    <input id="cashout-number" minlength="11" maxlength="11" type="number" value="01853253943"
+                        class="input rounded-full bg-base-200 border-none w-full" placeholder="Enter 11 digit number" />
+                    <br>
+
+                    <label class="label text-neutral font-bold">Amount</label>
+                    <input id="cashout-amount" type="number"
+                        class="input rounded-full bg-base-200 border-none w-full" placeholder="Enter amount to withdraw" />
+                    <br>
+
+                    <label class="label text-neutral font-bold">Pin Number</label>
+                    <input id="cashout-pin" maxlength="4" type="password" class="input rounded-full bg-base-200 border-none w-full"
+                        placeholder="Enter 4 digit pin number" />
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <script src="./scripts/cashout.js"></script>
 </body>
 
 </html>
