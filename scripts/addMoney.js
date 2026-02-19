@@ -40,6 +40,20 @@ Date : ${new Date()}
             `
         );
         setBalance(newBalance);
+
+        // history-container k dhorte hobe
+        const historyContainer = document.getElementById('history-container');
+        // newDiv create korte hobe
+        const newDiv = document.createElement('div');
+        // newDiv a innerHTML add korte hobe
+        newDiv.innerHTML = `
+        <div class="history-card p-5 bg-base-100 rounded-lg bg-primary/70 text-white font-medium">
+             Add Money ${addAmount} TAKA Successfully added from ${bank} at
+             ${new Date()}
+        </div>
+        `
+        // history-container a newDiv append kore dite hobe
+        historyContainer.append(newDiv);
     }
     else {
         // 7- if false:::> error alert> return
